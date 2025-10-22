@@ -1,0 +1,380 @@
+
+  "schema": "trainer.v1",
+  "title": "IN • ON • AT",
+  "description": "Предлоги места и времени. Поддержка нескольких пропусков.",
+  "options": [
+    "in",
+    "on",
+    "at"
+  ],
+  "formatUpper": true,
+  "items": [
+    {
+      "s": "The meeting starts ___ 3 p.m.",
+      "a": [
+        "at"
+      ],
+      "cat": "time",
+      "exp": "Точное время → <b>at</b>."
+    },
+    {
+      "s": "We have classes ___ Monday.",
+      "a": [
+        "on"
+      ],
+      "cat": "time",
+      "exp": "Дни недели → <b>on</b>."
+    },
+    {
+      "s": "Their wedding is ___ June.",
+      "a": [
+        "in"
+      ],
+      "cat": "time",
+      "exp": "Месяцы → <b>in</b>."
+    },
+    {
+      "s": "He was born ___ 1999.",
+      "a": [
+        "in"
+      ],
+      "cat": "time",
+      "exp": "Годы → <b>in</b>."
+    },
+    {
+      "s": "The store closes ___ night.",
+      "a": [
+        "at"
+      ],
+      "cat": "time",
+      "exp": "Исключение: <b>at night</b>."
+    },
+    {
+      "s": "We usually go to the gym ___ the morning.",
+      "a": [
+        "in"
+      ],
+      "cat": "time",
+      "exp": "Части суток → <b>in the morning</b>."
+    },
+    {
+      "s": "The party is ___ Friday evening.",
+      "a": [
+        "on"
+      ],
+      "cat": "time",
+      "exp": "Дни + части суток → <b>on</b>."
+    },
+    {
+      "s": "I will see you ___ the weekend.",
+      "a": [
+        "at",
+        "on"
+      ],
+      "cat": "time",
+      "exp": "BrE: <b>at</b>, AmE: <b>on</b> the weekend."
+    },
+    {
+      "s": "Our exam is ___ the 15th of May.",
+      "a": [
+        "on"
+      ],
+      "cat": "time",
+      "exp": "Конкретные даты → <b>on</b>."
+    },
+    {
+      "s": "They moved here ___ spring.",
+      "a": [
+        "in"
+      ],
+      "cat": "time",
+      "exp": "Сезоны → <b>in</b>."
+    },
+    {
+      "s": "She is waiting ___ the bus stop.",
+      "a": [
+        "at"
+      ],
+      "cat": "place",
+      "exp": "Точка/место встречи → <b>at</b>."
+    },
+    {
+      "s": "He lives ___ London.",
+      "a": [
+        "in"
+      ],
+      "cat": "place",
+      "exp": "Города/страны → <b>in</b>."
+    },
+    {
+      "s": "The book is ___ the table.",
+      "a": [
+        "on"
+      ],
+      "cat": "place",
+      "exp": "Поверхность → <b>on</b>."
+    },
+    {
+      "s": "I left my keys ___ my pocket.",
+      "a": [
+        "in"
+      ],
+      "cat": "place",
+      "exp": "Внутри чего-то → <b>in</b>."
+    },
+    {
+      "s": "We met ___ the airport.",
+      "a": [
+        "at"
+      ],
+      "cat": "place",
+      "exp": "Точки/терминалы → <b>at</b>."
+    },
+    {
+      "s": "They’re swimming ___ the river.",
+      "a": [
+        "in"
+      ],
+      "cat": "place",
+      "exp": "Вода/объём → <b>in</b>."
+    },
+    {
+      "s": "There’s a picture ___ the wall.",
+      "a": [
+        "on"
+      ],
+      "cat": "place",
+      "exp": "Вертикальная поверхность → <b>on</b>."
+    },
+    {
+      "s": "Let’s meet ___ the corner of the street.",
+      "a": [
+        "at",
+        "on"
+      ],
+      "cat": "place",
+      "exp": "Обычно <b>at</b>, в BrE также <b>on</b>."
+    },
+    {
+      "s": "We arrived ___ the hotel at 6.",
+      "a": [
+        "at"
+      ],
+      "cat": "place",
+      "exp": "Arrive at (точка)."
+    },
+    {
+      "s": "We arrived ___ Paris at noon.",
+      "a": [
+        "in"
+      ],
+      "cat": "place",
+      "exp": "Arrive in (город/страна)."
+    },
+    {
+      "s": "He is ___ the bus.",
+      "a": [
+        "on"
+      ],
+      "cat": "transport",
+      "exp": "Общ. транспорт/борт → <b>on</b>."
+    },
+    {
+      "s": "She is ___ a taxi.",
+      "a": [
+        "in"
+      ],
+      "cat": "transport",
+      "exp": "Малый транспорт → <b>in</b>."
+    },
+    {
+      "s": "We are ___ a car.",
+      "a": [
+        "in"
+      ],
+      "cat": "transport",
+      "exp": "Внутри машины → <b>in</b>."
+    },
+    {
+      "s": "They’re traveling ___ a plane right now.",
+      "a": [
+        "on"
+      ],
+      "cat": "transport",
+      "exp": "На борту → <b>on</b>."
+    },
+    {
+      "s": "I go to work ___ foot.",
+      "a": [
+        "on"
+      ],
+      "cat": "transport",
+      "exp": "Идиома: <b>on foot</b>."
+    },
+    {
+      "s": "She lives ___ Baker Street.",
+      "a": [
+        "on"
+      ],
+      "cat": "addresses",
+      "exp": "Улицы (AmE) → <b>on</b>."
+    },
+    {
+      "s": "The office is ___ 27 King Road.",
+      "a": [
+        "at"
+      ],
+      "cat": "addresses",
+      "exp": "Полный адрес с номером → <b>at</b>."
+    },
+    {
+      "s": "I saw it ___ TV.",
+      "a": [
+        "on"
+      ],
+      "cat": "addresses",
+      "exp": "Медиа → <b>on</b>."
+    },
+    {
+      "s": "He’s ___ the phone right now.",
+      "a": [
+        "on"
+      ],
+      "cat": "addresses",
+      "exp": "Идиома → <b>on the phone</b>."
+    },
+    {
+      "s": "I’m ___ home.",
+      "a": [
+        "at"
+      ],
+      "cat": "addresses",
+      "exp": "Фикс. выражение → <b>at home</b>."
+    },
+    {
+      "s": "She’s ___ work.",
+      "a": [
+        "at"
+      ],
+      "cat": "addresses",
+      "exp": "Фикс. выражение → <b>at work</b>."
+    },
+    {
+      "s": "The kids are ___ school.",
+      "a": [
+        "at",
+        "in"
+      ],
+      "cat": "addresses",
+      "exp": "Цель/занятия → <b>at</b>; физически внутри → <b>in</b> (AmE)."
+    },
+    {
+      "s": "Birds are flying ___ the sky.",
+      "a": [
+        "in"
+      ],
+      "cat": "addresses",
+      "exp": "Объёмная среда → <b>in</b>."
+    },
+    {
+      "s": "There’s a scratch ___ the screen.",
+      "a": [
+        "on"
+      ],
+      "cat": "addresses",
+      "exp": "Поверхность → <b>on</b>."
+    },
+    {
+      "s": "We’ll stop ___ the way.",
+      "a": [
+        "on"
+      ],
+      "cat": "addresses",
+      "exp": "Идиома → <b>on the way</b>."
+    },
+    {
+      "s": "He’s standing ___ the door.",
+      "a": [
+        "at",
+        "in"
+      ],
+      "cat": "place",
+      "exp": "У двери → <b>at</b>; в проёме → <b>in</b>."
+    },
+    {
+      "s": "I left a note ___ your desk.",
+      "a": [
+        "on"
+      ],
+      "cat": "place",
+      "exp": "Поверхность стола → <b>on</b>."
+    },
+    {
+      "s": "There’s a meeting ___ Room 402.",
+      "a": [
+        "in",
+        "at"
+      ],
+      "cat": "place",
+      "exp": "Обычно <b>in</b>, как точка на схеме — <b>at</b>."
+    },
+    {
+      "s": "She’s ___ the beach now.",
+      "a": [
+        "at",
+        "on"
+      ],
+      "cat": "place",
+      "exp": "Локация → <b>at</b>; поверхность песка → <b>on</b>."
+    },
+    {
+      "s": "The picture is ___ the cover of the magazine.",
+      "a": [
+        "on"
+      ],
+      "cat": "place",
+      "exp": "Обложка → <b>on</b>."
+    },
+    {
+      "s": "We stayed ___ a small island.",
+      "a": [
+        "on"
+      ],
+      "cat": "place",
+      "exp": "Остров → <b>on</b>."
+    },
+    {
+      "s": "He’s ___ the hospital visiting his friend.",
+      "a": [
+        "at",
+        "in"
+      ],
+      "cat": "place",
+      "exp": "Учреждение/цель → <b>at</b>; физически внутри → <b>in</b>."
+    },
+    {
+      "s": "The show starts ___ noon.",
+      "a": [
+        "at"
+      ],
+      "cat": "time",
+      "exp": "Полдень/полночь → <b>at</b>."
+    },
+    {
+      "s": "She studies ___ the morning, has classes ___ Monday, and arrives ___ 9 a.m.",
+      "a": [
+        [
+          "in"
+        ],
+        [
+          "on"
+        ],
+        [
+          "at"
+        ]
+      ],
+      "cat": "time",
+      "exp": "Части суток → <b>in</b>; дни недели → <b>on</b>; точное время → <b>at</b>."
+    }
+  ]
+}
