@@ -23,9 +23,11 @@
     .topbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin: 10px 0 16px; }
     .pill { border: 1px solid #303659; padding: 8px 12px; border-radius: 999px; color: #d9def0; background: #14192e; cursor: pointer; }
     .stats { display: flex; gap: 12px; color: #c9d4ee; flex-wrap: wrap; }
-    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; align-items:center; }
     .actions button { border: 1px solid #3a4062; background: #131935; color: #e9ecf1; padding: 8px 12px; border-radius: 10px; cursor: pointer; }
     .actions button:hover { border-color: #6f78ff; }
+    .back { display:flex; align-items:center; gap:8px; border-color:#39406b; background:#0f1633; }
+    .back:before { content:'←'; }
     .cat { font-size: 12px; color: #a1aacb; margin-left: 6px; }
     .hidden { display: none; }
     .banner { background: #2a2139; border: 1px dashed #5b5681; margin-bottom: 12px; padding: 10px 12px; border-radius: 10px; color: #d9d3ff; }
@@ -46,13 +48,13 @@
 
   <div class="topbar">
     <div class="actions">
+      <button id="backBtn" class="back">Назад</button>
       <button id="shuffle">Перемешать</button>
       <button id="reset">Сбросить результаты</button>
       <button id="review">Повторить ошибки</button>
       <button id="export">Экспорт статистики</button>
       <button id="show-all-explanations">Показать объяснения</button>
       <button id="hide-all-explanations" class="hidden">Скрыть объяснения</button>
-      <button id="auth-btn">Войти</button><span id="auth-user" class="cat"></span>
     </div>
     <div class="stats">
       <div>Прогресс: <span id="done">0</span>/<span id="total">0</span></div>
@@ -93,8 +95,8 @@ let STORAGE_KEY = 'trainer-v3:unknown';
 function djb2(str){ let h=5381; for(let i=0;i<str.length;i++){ h=((h<<5)+h)^str.charCodeAt(i);} return (h>>>0).toString(16); }
 function computeStorageKey(setObj){ const plain = JSON.stringify({title:setObj.title||'', items:setObj.items||[]}); return 'trainer-v3:'+djb2(plain); }
 
-window.saveStats = function(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(STATS)); }
-window.loadStats = function(){ try{ const raw=localStorage.getItem(STORAGE_KEY); if(!raw) return {perItem:{},totals:{attempts:0,correct:0}}; return JSON.parse(raw);}catch(e){ return {perItem:{},totals:{attempts:0,correct:0}}; } }
+function saveStats(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(STATS)); }
+function loadStats(){ try{ const raw=localStorage.getItem(STORAGE_KEY); if(!raw) return {perItem:{},totals:{attempts:0,correct:0}}; return JSON.parse(raw);}catch(e){ return {perItem:{},totals:{attempts:0,correct:0}}; } }
 function shuffleArray(arr){ for (let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } }
 
 function answersPerPosition(item){
@@ -275,82 +277,18 @@ showAllBtn.addEventListener('click',()=>showAllExplanations(true));
 hideAllBtn.addEventListener('click',()=>showAllExplanations(false));
 document.getElementById('review').addEventListener('click',reviewMistakes);
 document.getElementById('export').addEventListener('click',exportStats);
-</script>
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInAnonymously, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-  import { getFirestore, doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "PASTE_YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    appId: "PASTE_YOUR_APP_ID"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db = getFirestore(app);
-
-  const authBtn = document.getElementById('auth-btn');
-  const authUser = document.getElementById('auth-user');
-
-  async function loadStatsCloud(setHash){
-    const ref = doc(db, 'users', auth.currentUser.uid, 'progress', setHash);
-    const snap = await getDoc(ref);
-    return snap.exists() ? snap.data().stats : null;
-  }
-  async function saveStatsCloud(setHash, stats){
-    const ref = doc(db, 'users', auth.currentUser.uid, 'progress', setHash);
-    await setDoc(ref, { stats, updatedAt: serverTimestamp() }, { merge: true });
-  }
-
-  const _saveLocal = window.saveStats;
-  const _loadLocal = window.loadStats;
-
-  window.loadStats = function(){
-    const local = _loadLocal();
-    return local;
-  };
-  window.saveStats = function(){
-    _saveLocal();
-    if (auth.currentUser) {
-      const setHash = STORAGE_KEY.replace('trainer-v3:', '');
-      saveStatsCloud(setHash, STATS).catch(()=>{});
+// Back button: use history if same-origin, else go to index.html
+document.getElementById('backBtn').addEventListener('click', () => {
+  try {
+    if (document.referrer && new URL(document.referrer).origin === location.origin) {
+      history.back();
+      return;
     }
-  };
-
-  async function syncFromCloudIfAny(){
-    if (!auth.currentUser) return;
-    const setHash = STORAGE_KEY.replace('trainer-v3:', '');
-    const cloud = await loadStatsCloud(setHash);
-    if (cloud) {
-      STATS = cloud;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(STATS));
-      document.getElementById('done').textContent = String(STATS.totals?.correct || 0);
-      document.getElementById('right').textContent = String(STATS.totals?.correct || 0);
-    } else {
-      saveStatsCloud(setHash, STATS).catch(()=>{});
-    }
-  }
-
-  authBtn.addEventListener('click', async () => {
-    if (auth.currentUser) { await signOut(auth); return; }
-    try { await signInWithPopup(auth, new GoogleAuthProvider()); }
-    catch (e) { await signInAnonymously(auth); }
-  });
-
-  onAuthStateChanged(auth, async (user) => {
-    if (user) {
-      authBtn.textContent = 'Выйти';
-      authUser.textContent = user.isAnonymous ? '(гость)' : (user.email || '(вошёл)');
-      await syncFromCloudIfAny();
-    } else {
-      authBtn.textContent = 'Войти';
-      authUser.textContent = '';
-    }
-  });
+  } catch(e){}
+  const base = location.href.split('/').slice(0, -1).join('/') + '/index.html';
+  location.href = base;
+});
 </script>
 </body>
 </html>
