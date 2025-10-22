@@ -1,0 +1,17 @@
+{
+  "updated": "2025-10-21T16:14:37.282404Z",
+  "sets": [
+    {
+      "id": "in-on-at",
+      "title": "IN • ON • AT",
+      "desc": "Предлоги места и времени. Поддержка нескольких пропусков.",
+      "src": "sets/in_on_at.json"
+    },
+    {
+      "id": "present-simple-demo",
+      "title": "Present Simple — демо",
+      "desc": "Демо-набор (замени своими).",
+      "src": "sets/present_simple.json"
+    }
+  ]
+}
