@@ -1,0 +1,85 @@
+{
+  "schema": "trainer.v1",
+  "title": "Present Simple — демо",
+  "description": "Демо-набор (замени своими).",
+  "formatUpper": false,
+  "items": [
+    {
+      "s": "He ___ to school every day.",
+      "a": [
+        "goes"
+      ],
+      "cat": "verb-s",
+      "exp": "3-е лицо ед. числа → <b>goes</b>.",
+      "options": [
+        "goes",
+        "go",
+        "went"
+      ]
+    },
+    {
+      "s": "___ she like coffee?",
+      "a": [
+        "does"
+      ],
+      "cat": "aux",
+      "exp": "Вопрос к he/she/it → <b>does</b>.",
+      "options": [
+        "do",
+        "does",
+        "did"
+      ]
+    },
+    {
+      "s": "They ___ not play tennis on Mondays.",
+      "a": [
+        "do",
+        "don't"
+      ],
+      "cat": "neg",
+      "exp": "Отрицание → <b>do not / don't</b>."
+    },
+    {
+      "s": "I ___ a teacher.",
+      "a": [
+        "am"
+      ],
+      "cat": "to be",
+      "exp": "Глагол-связка → <b>am</b>."
+    },
+    {
+      "s": "He ___ happy.",
+      "a": [
+        "is"
+      ],
+      "cat": "to be",
+      "exp": "He/She/It → <b>is</b>."
+    },
+    {
+      "s": "___ he ___ football ___ weekends?",
+      "a": [
+        [
+          "does"
+        ],
+        [
+          "play"
+        ],
+        [
+          "on"
+        ]
+      ],
+      "cat": "q",
+      "exp": "Вопрос: <b>Does</b> + bare verb; дни → <b>on</b>.",
+      "options": [
+        "does",
+        "do",
+        "is",
+        "play",
+        "plays",
+        "on",
+        "in",
+        "at"
+      ]
+    }
+  ]
+}
