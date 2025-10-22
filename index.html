@@ -17,29 +17,12 @@
   a.btn,button.btn{display:inline-block;border:1px solid #3a4062;background:#1e2340;color:#e9ecf1;padding:10px 14px;border-radius:12px;text-decoration:none;cursor:pointer}
   a.btn:hover,button.btn:hover{border-color:#6f78ff}
   .sub{color:#b7c0d1;margin:0 0 16px}
-  .uploader{margin:16px 0;padding:16px;border:1px dashed #3a4062;border-radius:12px;background:#14192e}
-  .uploader h2{margin:0 0 8px;font-size:18px}
-  .rowbtns{display:flex;gap:10px;flex-wrap:wrap}
-  input[type=file]{display:none}
-  .note{color:#9fb0d8;margin-top:8px;font-size:13px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Выбери тренажёр</h1>
   <div class="sub">Все наборы открываются одной и той же «основой». Работает на iPhone/Safari.</div>
-
-  <div class="uploader" id="up">
-    <h2>Загрузить свой тренажёр (JSON, офлайн-в браузере)</h2>
-    <div class="rowbtns">
-      <label for="file" class="btn">Загрузить тренажёр (файл)</label>
-      <button class="btn" id="paste">Вставить JSON из буфера</button>
-      <button class="btn" id="drop">Перетащить сюда (активировать)</button>
-    </div>
-    <input id="file" type="file" accept="application/json,.json">
-    <div class="note">Ничего не отправляется на сервер: данные читаются локально и сохраняются в sessionStorage. После загрузки откроется основа с параметром <code>?sid=...</code>.</div>
-  </div>
-
   <div id="grid" class="grid"></div>
 </div>
 <script>
@@ -64,53 +47,6 @@
       d.textContent = 'Не удалось загрузить trainers.json: ' + e;
       grid.appendChild(d);
     });
-
-  function makeId(){ return 's' + Math.random().toString(36).slice(2) + Date.now().toString(36); }
-  function openSID(obj){
-    try{
-      const sid = makeId();
-      sessionStorage.setItem('trainer:'+sid, JSON.stringify(obj));
-      location.href = 'trainer.html?sid=' + encodeURIComponent(sid);
-    }catch(e){
-      alert('Не удалось сохранить набор в sessionStorage: ' + e);
-    }
-  }
-
-  const fileInput = document.getElementById('file');
-  fileInput.addEventListener('change', (ev)=>{
-    const f = ev.target.files && ev.target.files[0];
-    if(!f) return;
-    const fr = new FileReader();
-    fr.onload = () => {
-      try{ openSID(JSON.parse(fr.result)); }catch(e){ alert('Некорректный JSON: ' + e); }
-    };
-    fr.readAsText(f);
-  });
-
-  document.getElementById('paste').addEventListener('click', async()=>{
-    try{ openSID(JSON.parse(await navigator.clipboard.readText())); }
-    catch(e){ alert('Не удалось прочитать или распарсить JSON из буфера: ' + e); }
-  });
-
-  const up = document.getElementById('up');
-  let dropActive = false;
-  document.getElementById('drop').addEventListener('click', ()=>{
-    dropActive = !dropActive;
-    up.style.borderColor = dropActive ? '#6f78ff' : '#3a4062';
-    up.style.background = dropActive ? '#1b2146' : '#14192e';
-  });
-  ;['dragover','dragenter'].forEach(ev => up.addEventListener(ev, e => { if(!dropActive) return; e.preventDefault(); }));
-  ;['drop'].forEach(ev => up.addEventListener(ev, e => {
-    if(!dropActive) return;
-    e.preventDefault();
-    const f = e.dataTransfer.files && e.dataTransfer.files[0];
-    if(!f) return;
-    const fr = new FileReader();
-    fr.onload = () => {
-      try{ openSID(JSON.parse(fr.result)); }catch(e){ alert('Некорректный JSON: ' + e); }
-    };
-    fr.readAsText(f);
-  }));
 </script>
 </body>
 </html>
