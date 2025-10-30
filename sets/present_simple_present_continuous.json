@@ -1,129 +1,1338 @@
 {
   "schema": "trainer.v1",
-  "title": "PRESENT SIMPLE • PRESENT CONTINUOUS",
-  "description": "100 заданий (50 Present Simple, 50 Present Continuous). От простого к сложному. В options — только служебные формы (be, do/does + отрицания) и метки для смыслового do.",
+  "title": "Present Simple vs Present Continuous — 100 задач",
+  "description": "50 задач на Present Simple и 50 на Present Continuous, от базовых к tricky-cases (stative, main 'do', schedules vs arrangements, annoyance, passive, change).",
   "formatUpper": false,
-  "options": [
-    "am","is","are","am not","isn't","aren't",
-    "do","does","don't","doesn't",
-    "Do","Does","Am","Is","Are",
-    "do (v)","does (v)"
-  ],
   "items": [
-    { "s": "I ___ a student.", "a": ["am"], "cat": "present_simple", "exp": "Глагол be в Present Simple: I → am." },
-    { "s": "He ___ at home on weekdays.", "a": ["is"], "cat": "present_simple", "exp": "He/She/It → is." },
-    { "s": "They ___ from Spain.", "a": ["are"], "cat": "present_simple", "exp": "Множественное число → are." },
-    { "s": "We ___ not late.", "a": ["are"], "cat": "present_simple", "exp": "Утвердительное be: We are. (Отрицание будет: aren't)." },
-    { "s": "She ___ not a designer.", "a": ["isn't"], "cat": "present_simple", "exp": "Отрицание be: She isn't." },
-    { "s": "I ___ not hungry.", "a": ["am not"], "cat": "present_simple", "exp": "Единственная валидная отрицательная форма с I: am not." },
-    { "s": "They ___ not ready yet.", "a": ["aren't"], "cat": "present_simple", "exp": "Отрицание be: are not → aren't." },
-    { "s": "___ you from Berlin?", "a": ["Are"], "cat": "present_simple", "exp": "Вопрос с be: Are + подлежащее." },
-    { "s": "___ he your brother?", "a": ["Is"], "cat": "present_simple", "exp": "Вопрос с be: Is + подлежащее." },
-    { "s": "___ I in the right place?", "a": ["Am"], "cat": "present_simple", "exp": "Вопрос c I: Am I...?" },
-
-    { "s": "I ___ coffee every morning.", "a": ["do"], "cat": "present_simple", "exp": "Утверждение без вспомогательного — но мы тренируем выбор вспомогательного в вопросах/отрицаниях далее." },
-    { "s": "___ you like jazz?", "a": ["Do"], "cat": "present_simple", "exp": "Вопрос в Present Simple: Do + V1." },
-    { "s": "___ she play tennis?", "a": ["Does"], "cat": "present_simple", "exp": "3 л. ед. ч.: Does + V1 (без -s после does)." },
-    { "s": "They ___ speak Chinese.", "a": ["don't"], "cat": "present_simple", "exp": "Отрицание: don't + V1." },
-    { "s": "He ___ like spicy food.", "a": ["doesn't"], "cat": "present_simple", "exp": "Отрицание 3 л. ед. ч.: doesn't + V1." },
-    { "s": "Why ___ you study at night?", "a": ["do"], "cat": "present_simple", "exp": "Wh-вопрос: Why + do + V1." },
-    { "s": "When ___ she usually get up?", "a": ["does"], "cat": "present_simple", "exp": "Wh + does + V1 (без -s на глаголе)." },
-    { "s": "What ___ they do after work?", "a": ["do"], "cat": "present_simple", "exp": "Вопрос к действию: do + V1." },
-    { "s": "He ___ go to the gym on Sundays.", "a": ["doesn't"], "cat": "present_simple", "exp": "Отрицание привычки: doesn't + V1." },
-    { "s": "We ___ watch horror movies.", "a": ["don't"], "cat": "present_simple", "exp": "Общая привычка-отрицание: don't + V1." },
-
-    { "s": "The train schedule is fixed: it ___ at 6:40 tomorrow.", "a": ["does"], "cat": "present_simple", "exp": "Фактически тренируем вспом. 'does' для вопрос/отрицания; само правило: расписание выражают Present Simple." },
-    { "s": "If it ___, we stay home. (вспом. для вопрос/отрицания здесь не нужен)", "a": ["do"], "cat": "present_simple", "exp": "Придаточные времени/условия — Present Simple (здесь просто отмечаем правило)." },
-    { "s": "Why ___ this solution work?", "a": ["does"], "cat": "present_simple", "exp": "Вопрос: does + V1." },
-    { "s": "How often ___ you travel for work?", "a": ["Do"], "cat": "present_simple", "exp": "Вопрос о частоте: Do + V1." },
-    { "s": "Where ___ he live?", "a": ["Does"], "cat": "present_simple", "exp": "Wh + does + V1." },
-    { "s": "What time ___ the museum open?", "a": ["does"], "cat": "present_simple", "exp": "Вопрос к расписанию: does + V1." },
-    { "s": "They usually work, but today they ___ not.", "a": ["do"], "cat": "present_simple", "exp": "Контраст с Continuous придёт ниже; здесь тренируем do/does/don't/doesn't." },
-    { "s": "He often helps, but he ___ not today.", "a": ["does"], "cat": "present_simple", "exp": "Смысл в контрасте: сегодня — Continuous; здесь — на форму does/doesn't." },
-    { "s": "I ___ understand the instructions.", "a": ["don't"], "cat": "present_simple", "exp": "Отрицание: don't + V1." },
-    { "s": "She ___ know the answer.", "a": ["doesn't"], "cat": "present_simple", "exp": "Stative 'know' в Simple, отрицание: doesn't." },
-
-    { "s": "She ___ this idea makes sense. (stative)", "a": ["doesn't"], "cat": "present_simple", "exp": "Stative глаголы обычно Simple; здесь отрицание через doesn't." },
-    { "s": "This cake ___ taste sweet? (характеристика)", "a": ["Does"], "cat": "present_simple", "exp": "Вопрос о свойствах: Does + V1." },
-    { "s": "The dress ___ fit you?", "a": ["Does"], "cat": "present_simple", "exp": "Fit о размере → Simple; вопрос: Does." },
-    { "s": "It ___ seem right to me.", "a": ["doesn't"], "cat": "present_simple", "exp": "Seem — stative; отрицание через doesn't." },
-    { "s": "They ___ believe this story.", "a": ["don't"], "cat": "present_simple", "exp": "Believe — stative; don't + V1." },
-    { "s": "I ___ want any sugar.", "a": ["don't"], "cat": "present_simple", "exp": "Want — stative; don't + V1." },
-    { "s": "She ___ need your help.", "a": ["doesn't"], "cat": "present_simple", "exp": "Need — stative; doesn't + V1." },
-    { "s": "We ___ understand the risks.", "a": ["don't"], "cat": "present_simple", "exp": "Stative understand; don't + V1." },
-    { "s": "He ___ remember her name.", "a": ["doesn't"], "cat": "present_simple", "exp": "Remember — stative; doesn't + V1." },
-    { "s": "You ___ know what I mean?", "a": ["Do"], "cat": "present_simple", "exp": "Вопрос со stative: Do you know...?" },
-
-    { "s": "He ___ his homework on Fridays. (смысловой do)", "a": ["does (v)"], "cat": "present_simple", "exp": "Смысловой do: does (v)." },
-    { "s": "We ___ our best every day. (смысловой do)", "a": ["do (v)"], "cat": "present_simple", "exp": "Идиома: do (v) our best." },
-    { "s": "What ___ you do (v) on weekends?", "a": ["Do"], "cat": "present_simple", "exp": "Вопрос со вспом. Do + смысловой do (v)." },
-    { "s": "She ___ yoga, not pilates. (смысловой do)", "a": ["does (v)"], "cat": "present_simple", "exp": "Do (v) yoga." },
-    { "s": "They never ___ harm. (смысловой do)", "a": ["do (v)"], "cat": "present_simple", "exp": "Идиома: do (v) harm." },
-    { "s": "He ___ nothing by accident. (смысловой do)", "a": ["does (v)"], "cat": "present_simple", "exp": "Does (v) nothing..." },
-    { "s": "I ___ the dishes after dinner. (смысловой do)", "a": ["do (v)"], "cat": "present_simple", "exp": "Do (v) the dishes." },
-    { "s": "The machine ___ the work automatically. (смысловой do)", "a": ["does (v)"], "cat": "present_simple", "exp": "Про устройство: does (v) the work." },
-    { "s": "We ___ business with Korea. (смысловой do)", "a": ["do (v)"], "cat": "present_simple", "exp": "Do (v) business." },
-    { "s": "She ___ her hair herself. (смысловой do)", "a": ["does (v)"], "cat": "present_simple", "exp": "Do (v) one's hair." },
-
-    { "s": "He ___ always late for meetings. (факт)", "a": ["is"], "cat": "present_simple", "exp": "Always + be как характеристика → is." },
-    { "s": "How often ___ you think about it?", "a": ["Do"], "cat": "present_simple", "exp": "How often + do + V1." },
-    { "s": "If it rains, we stay home — but why ___ you always complain?", "a": ["do"], "cat": "present_simple", "exp": "Вопрос общего характера: do + V1." },
-    { "s": "When ___ she arrive, call me.", "a": ["does"], "cat": "present_simple", "exp": "Временная клауза будущего: Present Simple; вопросная форма тренируется вспом. does." },
-    { "s": "___ this jacket fit me?", "a": ["Does"], "cat": "present_simple", "exp": "Fit о размере → Simple; Does it fit...?" },
-
-    { "s": "I ___ working now.", "a": ["am"], "cat": "present_continuous", "exp": "Сейчас → am + V-ing." },
-    { "s": "She ___ reading at the moment.", "a": ["is"], "cat": "present_continuous", "exp": "She → is + V-ing." },
-    { "s": "They ___ playing football right now.", "a": ["are"], "cat": "present_continuous", "exp": "They → are + V-ing." },
-    { "s": "We ___ having lunch.", "a": ["are"], "cat": "present_continuous", "exp": "Process now → are + having." },
-    { "s": "He ___ going home.", "a": ["is"], "cat": "present_continuous", "exp": "is + going." },
-    { "s": "You ___ watching this, right?", "a": ["are"], "cat": "present_continuous", "exp": "Are + V-ing (вопрос-уточнение)." },
-    { "s": "It ___ getting dark.", "a": ["is"], "cat": "present_continuous", "exp": "Изменения/тенденции сейчас → Continuous." },
-    { "s": "I ___ not listening.", "a": ["am not"], "cat": "present_continuous", "exp": "Отрицание: am not + V-ing." },
-    { "s": "She ___ not coming tonight.", "a": ["isn't"], "cat": "present_continuous", "exp": "Отрицание: isn't + V-ing." },
-    { "s": "They ___ not working today.", "a": ["aren't"], "cat": "present_continuous", "exp": "Отрицание: aren't + V-ing." },
-
-    { "s": "___ you coming with us?", "a": ["Are"], "cat": "present_continuous", "exp": "Вопрос: Are + subject + V-ing?" },
-    { "s": "What ___ he doing?", "a": ["is"], "cat": "present_continuous", "exp": "Wh- + is + V-ing." },
-    { "s": "Where ___ they going?", "a": ["are"], "cat": "present_continuous", "exp": "Wh- + are + V-ing." },
-    { "s": "Why ___ she crying?", "a": ["is"], "cat": "present_continuous", "exp": "Причина процесса → is + V-ing." },
-    { "s": "Who ___ making that noise?", "a": ["is"], "cat": "present_continuous", "exp": "Who как подлежащее → is + V-ing." },
-    { "s": "___ it raining?", "a": ["Is"], "cat": "present_continuous", "exp": "Yes/No: Is it raining?" },
-    { "s": "What ___ you reading these days?", "a": ["are"], "cat": "present_continuous", "exp": "Временной промежуток «в эти дни» → Continuous." },
-    { "s": "___ we meeting later?", "a": ["Are"], "cat": "present_continuous", "exp": "План/договорённость → Continuous." },
-    { "s": "Which project ___ she leading now?", "a": ["is"], "cat": "present_continuous", "exp": "Текущая роль → is + V-ing." },
-    { "s": "How ___ the team performing this quarter?", "a": ["is"], "cat": "present_continuous", "exp": "Текущие результаты → is + V-ing." },
-
-    { "s": "I ___ thinking about moving.", "a": ["am"], "cat": "present_continuous", "exp": "Think как процесс → am thinking." },
-    { "s": "She ___ having a great time.", "a": ["is"], "cat": "present_continuous", "exp": "Устойчивые выражения с have (have fun) → Continuous ок." },
-    { "s": "You ___ being rude. (поведение сейчас)", "a": ["are"], "cat": "present_continuous", "exp": "Временное поведение: are being + adj." },
-    { "s": "He ___ seeing the dentist this afternoon.", "a": ["is"], "cat": "present_continuous", "exp": "Запланированный визит → будущ. значение Continuous." },
-    { "s": "We ___ looking for a new flat.", "a": ["are"], "cat": "present_continuous", "exp": "Длительный текущий процесс." },
-    { "s": "They ___ considering your offer.", "a": ["are"], "cat": "present_continuous", "exp": "Consider как процесс → Continuous." },
-    { "s": "I ___ feeling much better today.", "a": ["am"], "cat": "present_continuous", "exp": "О самочувствии сейчас → допустим Continuous." },
-    { "s": "She ___ not liking the idea. (звук неестественно)", "a": ["isn't"], "cat": "present_continuous", "exp": "Like обычно не в Continuous — распознаём как плохой стиль." },
-    { "s": "Listen! The birds ___ singing.", "a": ["are"], "cat": "present_continuous", "exp": "Сейчас, в момент речи → are singing." },
-    { "s": "Be quiet, the baby ___ sleeping.", "a": ["is"], "cat": "present_continuous", "exp": "is sleeping (процесс сейчас)." },
-
-    { "s": "Don't call him: he ___ driving.", "a": ["is"], "cat": "present_continuous", "exp": "Процесс в моменте → is driving." },
-    { "s": "Look! She ___ wearing a new dress.", "a": ["is"], "cat": "present_continuous", "exp": "Наблюдаем сейчас → is wearing." },
-    { "s": "I can't talk: we ___ boarding.", "a": ["are"], "cat": "present_continuous", "exp": "Текущий процесс → are boarding." },
-    { "s": "She ___ always losing her keys! (жалоба)", "a": ["is"], "cat": "present_continuous", "exp": "Always + Continuous для раздражения." },
-    { "s": "You're ___ constantly changing the plan.", "a": ["are"], "cat": "present_continuous", "exp": "Always/constantly + Continuous — критика." },
-    { "s": "He ___ meeting clients this week.", "a": ["is"], "cat": "present_continuous", "exp": "Временный график недели → Continuous." },
-    { "s": "We ___ launching the feature next week.", "a": ["are"], "cat": "present_continuous", "exp": "Личная договорённость о будущем → Continuous." },
-    { "s": "I ___ staying with friends for a while.", "a": ["am"], "cat": "present_continuous", "exp": "Временное проживание → Continuous." },
-    { "s": "She ___ seeing things. (кажется, галлюцинирует)", "a": ["is"], "cat": "present_continuous", "exp": "See в значении ‘переживать’ → Continuous возможен." },
-    { "s": "I ___ having second thoughts.", "a": ["am"], "cat": "present_continuous", "exp": "Be having second thoughts → устойч. выражение." },
-
-    { "s": "They ___ negotiating the contract.", "a": ["are"], "cat": "present_continuous", "exp": "Текущие переговоры → Continuous." },
-    { "s": "He ___ not being helpful today.", "a": ["isn't"], "cat": "present_continuous", "exp": "Временное поведение: isn't being helpful." },
-    { "s": "We ___ moving the deadline to Friday.", "a": ["are"], "cat": "present_continuous", "exp": "Решение/план прямо сейчас → Continuous." },
-    { "s": "Why ___ you always interrupting me?", "a": ["are"], "cat": "present_continuous", "exp": "Жалоба → always + Continuous." },
-    { "s": "What ___ you doing here?", "a": ["are"], "cat": "present_continuous", "exp": "Ситуация ‘сейчас’ → are doing." },
-    { "s": "Who ___ using my laptop?", "a": ["is"], "cat": "present_continuous", "exp": "Кто сейчас использует → is using." },
-    { "s": "I ___ getting used to it.", "a": ["am"], "cat": "present_continuous", "exp": "Be getting used to → процесс адаптации." },
-    { "s": "She ___ not coming after all.", "a": ["isn't"], "cat": "present_continuous", "exp": "Отмена планов → isn't coming." },
-    { "s": "I ___ meeting him later anyway.", "a": ["am"], "cat": "present_continuous", "exp": "Личная договорённость на позже сегодня → am meeting." },
-    { "s": "___ we still talking about work?", "a": ["Are"], "cat": "present_continuous", "exp": "Вопрос о текущем процессе." }
+    {
+      "s": "He ___ to the office by bus.",
+      "a": [
+        "goes"
+      ],
+      "cat": "ps:verb-s",
+      "exp": "3-е лицо ед. числа: <b>goes</b>.",
+      "options": [
+        "go",
+        "goes",
+        "is going"
+      ]
+    },
+    {
+      "s": "She ___ three languages.",
+      "a": [
+        "speaks"
+      ],
+      "cat": "ps:verb-s",
+      "exp": "3-е лицо ед. числа: <b>speaks</b>.",
+      "options": [
+        "speak",
+        "speaks",
+        "is speaking"
+      ]
+    },
+    {
+      "s": "My dad ___ coffee in the morning.",
+      "a": [
+        "drinks"
+      ],
+      "cat": "ps:verb-s",
+      "exp": "3-е лицо ед. числа: <b>drinks</b>.",
+      "options": [
+        "drink",
+        "drinks",
+        "is drinking"
+      ]
+    },
+    {
+      "s": "They ___ happy with the result.",
+      "a": [
+        "are"
+      ],
+      "cat": "ps:to-be",
+      "exp": "Plural → <b>are</b>.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ]
+    },
+    {
+      "s": "I ___ not sure about it.",
+      "a": [
+        "am"
+      ],
+      "cat": "ps:to-be",
+      "exp": "I → <b>am</b>.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ]
+    },
+    {
+      "s": "The meeting ___ at 9 a.m. on Mondays.",
+      "a": [
+        "is"
+      ],
+      "cat": "ps:to-be",
+      "exp": "Единственное число → <b>is</b>.",
+      "options": [
+        "is",
+        "are",
+        "was"
+      ]
+    },
+    {
+      "s": "___ you work from home?",
+      "a": [
+        "Do"
+      ],
+      "cat": "ps:aux-q",
+      "exp": "Вопрос к you/they → <b>Do</b>.",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ]
+    },
+    {
+      "s": "___ she play the piano?",
+      "a": [
+        "Does"
+      ],
+      "cat": "ps:aux-q",
+      "exp": "Вопрос к he/she/it → <b>Does</b>.",
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ]
+    },
+    {
+      "s": "___ it make sense to you?",
+      "a": [
+        "Does"
+      ],
+      "cat": "ps:aux-q",
+      "exp": "it → <b>Does</b>.",
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ]
+    },
+    {
+      "s": "I ___ like spicy food.",
+      "a": [
+        "don't"
+      ],
+      "cat": "ps:neg",
+      "exp": "Отрицание: <b>don't</b>.",
+      "options": [
+        "doesn't",
+        "don't",
+        "am not"
+      ]
+    },
+    {
+      "s": "He ___ know the answer.",
+      "a": [
+        "doesn't"
+      ],
+      "cat": "ps:neg",
+      "exp": "3-е лицо ед. числа: <b>doesn't</b>.",
+      "options": [
+        "don't",
+        "isn't",
+        "doesn't"
+      ]
+    },
+    {
+      "s": "They ___ watch TV on weekdays.",
+      "a": [
+        "don't"
+      ],
+      "cat": "ps:neg",
+      "exp": "Отрицание → <b>don't</b>.",
+      "options": [
+        "doesn't",
+        "aren't",
+        "don't"
+      ]
+    },
+    {
+      "s": "She ___ always arrives late.",
+      "a": [
+        "always"
+      ],
+      "cat": "ps:adv",
+      "exp": "Порядок наречий частоты: перед смысловым глаголом.",
+      "options": [
+        "always",
+        "is always",
+        "always is"
+      ]
+    },
+    {
+      "s": "I ___ usually have breakfast at 8.",
+      "a": [
+        "usually"
+      ],
+      "cat": "ps:adv",
+      "exp": "Наречие частоты → перед смысловым глаголом.",
+      "options": [
+        "usually",
+        "am usually",
+        "usually am"
+      ]
+    },
+    {
+      "s": "We ___ often meet after work.",
+      "a": [
+        "often"
+      ],
+      "cat": "ps:adv",
+      "exp": "Наречие частоты → перед смысловым глаголом.",
+      "options": [
+        "often",
+        "are often",
+        "often are"
+      ]
+    },
+    {
+      "s": "The train ___ at 7:45 tomorrow morning.",
+      "a": [
+        "leaves"
+      ],
+      "cat": "ps:schedule",
+      "exp": "Расписание (факт по расписанию) → Present Simple.",
+      "options": [
+        "leaves",
+        "is leaving",
+        "leave"
+      ]
+    },
+    {
+      "s": "Our shop ___ at 10 a.m. every day.",
+      "a": [
+        "opens"
+      ],
+      "cat": "ps:schedule",
+      "exp": "Регулярное расписание → <b>opens</b>.",
+      "options": [
+        "open",
+        "opens",
+        "is opening"
+      ]
+    },
+    {
+      "s": "I ___ the answer.",
+      "a": [
+        "know"
+      ],
+      "cat": "ps:stative",
+      "exp": "Stative verb → Present Simple.",
+      "options": [
+        "am knowing",
+        "know",
+        "am know"
+      ]
+    },
+    {
+      "s": "She ___ this cake tastes better.",
+      "a": [
+        "thinks"
+      ],
+      "cat": "ps:stative",
+      "exp": "Мнение как состояние → <b>thinks</b>.",
+      "options": [
+        "thinks",
+        "is thinking",
+        "think"
+      ]
+    },
+    {
+      "s": "We ___ the idea is risky.",
+      "a": [
+        "believe"
+      ],
+      "cat": "ps:stative",
+      "exp": "Состояние веры → <b>believe</b>.",
+      "options": [
+        "believe",
+        "are believing",
+        "believes"
+      ]
+    },
+    {
+      "s": "He ___ a car.",
+      "a": [
+        "has"
+      ],
+      "cat": "ps:stative",
+      "exp": "Владение обычно не в Continuous → <b>has</b>.",
+      "options": [
+        "has",
+        "is having",
+        "have"
+      ]
+    },
+    {
+      "s": "I ___ my homework every evening.",
+      "a": [
+        "do"
+      ],
+      "cat": "ps:main-do",
+      "exp": "<i>do</i> — смысловой глагол, не вспомогательный.",
+      "options": [
+        "do",
+        "does",
+        "am doing"
+      ]
+    },
+    {
+      "s": "___ he ___ the dishes at home?",
+      "a": [
+        [
+          "Does"
+        ],
+        [
+          "do"
+        ]
+      ],
+      "cat": "ps:main-do-q",
+      "exp": "Вопрос: вспом. <b>Does</b> + bare <b>do</b>.",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "do",
+        "does",
+        "doing"
+      ]
+    },
+    {
+      "s": "She ___ not ___ yoga on Sundays.",
+      "a": [
+        [
+          "does"
+        ],
+        [
+          "do"
+        ]
+      ],
+      "cat": "ps:main-do-neg",
+      "exp": "Отрицание: <b>does not</b> + bare <b>do</b>.",
+      "options": [
+        "does",
+        "do",
+        "doesn't",
+        "don't"
+      ]
+    },
+    {
+      "s": "I ___ this is a bad idea (opinion).",
+      "a": [
+        "think"
+      ],
+      "cat": "ps:contrast",
+      "exp": "Opinion → Present Simple.",
+      "options": [
+        "think",
+        "am thinking",
+        "thinks"
+      ]
+    },
+    {
+      "s": "Water ___ at 100°C.",
+      "a": [
+        "boils"
+      ],
+      "cat": "ps:fact",
+      "exp": "Общий факт/закон природы → <b>boils</b>.",
+      "options": [
+        "boil",
+        "boils",
+        "is boiling"
+      ]
+    },
+    {
+      "s": "If it rains, the ground ___ wet.",
+      "a": [
+        "gets"
+      ],
+      "cat": "ps:zero-cond",
+      "exp": "Zero Conditional → Present Simple.",
+      "options": [
+        "get",
+        "gets",
+        "is getting"
+      ]
+    },
+    {
+      "s": "Government ___ new tax plan next week (official schedule).",
+      "a": [
+        "announces"
+      ],
+      "cat": "ps:news-schedule",
+      "exp": "Запланированное событие по расписанию → Present Simple.",
+      "options": [
+        "announces",
+        "is announcing",
+        "announce"
+      ]
+    },
+    {
+      "s": "He ___ the ball, runs, and scores!",
+      "a": [
+        "takes"
+      ],
+      "cat": "ps:historic-present",
+      "exp": "Комментаторский исторический презент → Simple.",
+      "options": [
+        "take",
+        "takes",
+        "is taking"
+      ]
+    },
+    {
+      "s": "This soup ___ delicious.",
+      "a": [
+        "tastes"
+      ],
+      "cat": "ps:state-sense",
+      "exp": "Сенсорные глаголы в значении состояния → Simple.",
+      "options": [
+        "tastes",
+        "is tasting",
+        "taste"
+      ]
+    },
+    {
+      "s": "The package ___ 2 kg.",
+      "a": [
+        "weighs"
+      ],
+      "cat": "ps:state-measure",
+      "exp": "Глаголы измерения о постоянном свойстве → Simple.",
+      "options": [
+        "weighs",
+        "is weighing",
+        "weigh"
+      ]
+    },
+    {
+      "s": "He ___ to work every day by bike.",
+      "a": [
+        "rides"
+      ],
+      "cat": "ps:habit",
+      "exp": "Обычная привычка → Simple.",
+      "options": [
+        "ride",
+        "rides",
+        "is riding"
+      ]
+    },
+    {
+      "s": "She ___ her keys all the time. (annoying habit)",
+      "a": [
+        "loses"
+      ],
+      "cat": "ps:habit",
+      "exp": "Обычная (нераздражённая) привычка → Simple.",
+      "options": [
+        "lose",
+        "loses",
+        "is losing"
+      ]
+    },
+    {
+      "s": "This product ___ in Germany.",
+      "a": [
+        "is made"
+      ],
+      "cat": "ps:passive",
+      "exp": "Present Simple Passive: <b>is made</b>.",
+      "options": [
+        "is made",
+        "is making",
+        "makes"
+      ]
+    },
+    {
+      "s": "Tickets ___ online.",
+      "a": [
+        "are sold"
+      ],
+      "cat": "ps:passive",
+      "exp": "Plural Passive → <b>are sold</b>.",
+      "options": [
+        "are sold",
+        "sell",
+        "are selling"
+      ]
+    },
+    {
+      "s": "He ___ to watch series.",
+      "a": [
+        "likes"
+      ],
+      "cat": "ps:verb-s",
+      "exp": "-s к глаголу в 3 л. ед. ч.",
+      "options": [
+        "like",
+        "likes",
+        "is liking"
+      ]
+    },
+    {
+      "s": "She ___ dishes after dinner.",
+      "a": [
+        "washes"
+      ],
+      "cat": "ps:verb-es",
+      "exp": "Окончание -es после -sh → <b>washes</b>.",
+      "options": [
+        "wash",
+        "washes",
+        "is washing"
+      ]
+    },
+    {
+      "s": "I ___ the gym on Tuesdays and Thursdays.",
+      "a": [
+        "go to"
+      ],
+      "cat": "ps:collocation",
+      "exp": "Коллокация: <b>go to</b> the gym.",
+      "options": [
+        "go to",
+        "am going to",
+        "go"
+      ]
+    },
+    {
+      "s": "My class ___ at 8 a.m. every Friday.",
+      "a": [
+        "starts"
+      ],
+      "cat": "ps:schedule",
+      "exp": "Расписание → Simple.",
+      "options": [
+        "start",
+        "starts",
+        "is starting"
+      ]
+    },
+    {
+      "s": "We ___ podcasts during breakfast.",
+      "a": [
+        "listen to"
+      ],
+      "cat": "ps:collocation",
+      "exp": "Коллокация: <b>listen to</b>.",
+      "options": [
+        "listen to",
+        "listen",
+        "are listening"
+      ]
+    },
+    {
+      "s": "She ___ as a nurse.",
+      "a": [
+        "works"
+      ],
+      "cat": "ps:habit",
+      "exp": "Постоянная работа → Simple.",
+      "options": [
+        "work",
+        "works",
+        "is working"
+      ]
+    },
+    {
+      "s": "I ___ a shower every morning.",
+      "a": [
+        "have"
+      ],
+      "cat": "ps:fixed-have",
+      "exp": "Фикс. выражение → Simple.",
+      "options": [
+        "have",
+        "am having",
+        "has"
+      ]
+    },
+    {
+      "s": "He ___ every detail before deciding. (analyze)",
+      "a": [
+        "analyzes"
+      ],
+      "cat": "ps:verb-s",
+      "exp": "3-е лицо: <b>analyzes</b>.",
+      "options": [
+        "analyzes",
+        "analyzis",
+        "is analyzing"
+      ]
+    },
+    {
+      "s": "My grandparents ___ in the countryside.",
+      "a": [
+        "live"
+      ],
+      "cat": "ps:fact",
+      "exp": "Постоянный факт → Simple.",
+      "options": [
+        "live",
+        "are living",
+        "lives"
+      ]
+    },
+    {
+      "s": "I ___ you’re right about this. (feel/believe)",
+      "a": [
+        "feel"
+      ],
+      "cat": "ps:stative",
+      "exp": "Состояние/мнение → Simple.",
+      "options": [
+        "feel",
+        "am feeling",
+        "feels"
+      ]
+    },
+    {
+      "s": "The museum ___ on Mondays.",
+      "a": [
+        "closes"
+      ],
+      "cat": "ps:schedule",
+      "exp": "Расписание → Simple.",
+      "options": [
+        "close",
+        "closes",
+        "is closing"
+      ]
+    },
+    {
+      "s": "This app ___ a lot of battery.",
+      "a": [
+        "uses"
+      ],
+      "cat": "ps:fact",
+      "exp": "Общее утверждение → Simple.",
+      "options": [
+        "use",
+        "uses",
+        "is using"
+      ]
+    },
+    {
+      "s": "She rarely ___ sweets.",
+      "a": [
+        "eats"
+      ],
+      "cat": "ps:adv",
+      "exp": "Наречие частоты + Simple.",
+      "options": [
+        "eat",
+        "eats",
+        "is eating"
+      ]
+    },
+    {
+      "s": "We ___ that plan unless it changes. (not support)",
+      "a": [
+        "don't support"
+      ],
+      "cat": "ps:neg",
+      "exp": "Отрицание с do → <b>don't support</b>.",
+      "options": [
+        "don't support",
+        "aren't supporting",
+        "doesn't support"
+      ]
+    },
+    {
+      "s": "He ___ the guitar but not the piano.",
+      "a": [
+        "plays"
+      ],
+      "cat": "ps:contrast",
+      "exp": "Постоянное умение → Simple.",
+      "options": [
+        "play",
+        "plays",
+        "is playing"
+      ]
+    },
+    {
+      "s": "I ___ to you right now.",
+      "a": [
+        "am talking"
+      ],
+      "cat": "pc:now",
+      "exp": "Действие в момент речи → <b>am talking</b>.",
+      "options": [
+        "talk",
+        "am talking",
+        "talks"
+      ]
+    },
+    {
+      "s": "She ___ dinner at the moment.",
+      "a": [
+        "is cooking"
+      ],
+      "cat": "pc:now",
+      "exp": "Сейчас в процессе → <b>is cooking</b>.",
+      "options": [
+        "cooks",
+        "is cooking",
+        "cook"
+      ]
+    },
+    {
+      "s": "They ___ a movie at the cinema now.",
+      "a": [
+        "are watching"
+      ],
+      "cat": "pc:now",
+      "exp": "Сейчас в процессе → <b>are watching</b>.",
+      "options": [
+        "watch",
+        "are watching",
+        "watching"
+      ]
+    },
+    {
+      "s": "We ___ with friends this week.",
+      "a": [
+        "are staying"
+      ],
+      "cat": "pc:temporary",
+      "exp": "Временная ситуация → <b>are staying</b>.",
+      "options": [
+        "stay",
+        "are staying",
+        "staying"
+      ]
+    },
+    {
+      "s": "He ___ from home while the office is closed.",
+      "a": [
+        "is working"
+      ],
+      "cat": "pc:temporary",
+      "exp": "Временно → <b>is working</b>.",
+      "options": [
+        "works",
+        "is working",
+        "work"
+      ]
+    },
+    {
+      "s": "The weather ___ colder.",
+      "a": [
+        "is getting"
+      ],
+      "cat": "pc:change",
+      "exp": "Меняющиеся состояния → Continuous.",
+      "options": [
+        "gets",
+        "is getting",
+        "get"
+      ]
+    },
+    {
+      "s": "The number of users ___ fast.",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Изменение/тренд → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "You ___ always leaving the door open!",
+      "a": [
+        "are"
+      ],
+      "cat": "pc:always",
+      "exp": "Irritation: <b>are always V-ing</b> → нужны 2 вставки ниже.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ]
+    },
+    {
+      "s": "You are always ___ the door open!",
+      "a": [
+        "leaving"
+      ],
+      "cat": "pc:always-cont",
+      "exp": "Структура раздражения: <b>are always leaving</b>.",
+      "options": [
+        "leave",
+        "leaving",
+        "left"
+      ]
+    },
+    {
+      "s": "I ___ my dentist at 10 tomorrow.",
+      "a": [
+        "am seeing"
+      ],
+      "cat": "pc:arrangement",
+      "exp": "Личная договорённость на будущее → Continuous.",
+      "options": [
+        "see",
+        "am seeing",
+        "will see"
+      ]
+    },
+    {
+      "s": "We ___ to Paris this weekend.",
+      "a": [
+        "are flying"
+      ],
+      "cat": "pc:arrangement",
+      "exp": "Запланированное личное → Continuous.",
+      "options": [
+        "fly",
+        "are flying",
+        "will fly"
+      ]
+    },
+    {
+      "s": "She ___ a lot of sweets these days. (unusual)",
+      "a": [
+        "is eating"
+      ],
+      "cat": "pc:temp-habit",
+      "exp": "Временная/необычная привычка → Continuous.",
+      "options": [
+        "eats",
+        "is eating",
+        "eat"
+      ]
+    },
+    {
+      "s": "I ___ about changing jobs. (process)",
+      "a": [
+        "am thinking"
+      ],
+      "cat": "pc:contrast",
+      "exp": "Процесс размышления → Continuous.",
+      "options": [
+        "think",
+        "am thinking",
+        "thinks"
+      ]
+    },
+    {
+      "s": "We ___ lunch on the balcony now.",
+      "a": [
+        "are having"
+      ],
+      "cat": "pc:activity-have",
+      "exp": "Activity <i>have</i> → Continuous.",
+      "options": [
+        "have",
+        "are having",
+        "has"
+      ]
+    },
+    {
+      "s": "___ he ___ for the bus right now?",
+      "a": [
+        [
+          "Is"
+        ],
+        [
+          "waiting"
+        ]
+      ],
+      "cat": "pc:q",
+      "exp": "Вопрос в Continuous: <b>Is</b> + V-ing.",
+      "options": [
+        "Is",
+        "Are",
+        "Does",
+        "waiting",
+        "wait",
+        "is waiting"
+      ]
+    },
+    {
+      "s": "They ___ not ___ tonight; they’re staying in.",
+      "a": [
+        [
+          "are"
+        ],
+        [
+          "going out"
+        ]
+      ],
+      "cat": "pc:neg",
+      "exp": "Отрицание: <b>are not</b> + V-ing (go out → going out).",
+      "options": [
+        "are",
+        "is",
+        "am",
+        "going out",
+        "go out",
+        "to go out"
+      ]
+    },
+    {
+      "s": "I’m busy; I ___ on a proposal at the moment.",
+      "a": [
+        "am working"
+      ],
+      "cat": "pc:now",
+      "exp": "Сейчас → <b>am working</b>.",
+      "options": [
+        "work",
+        "am working",
+        "work at"
+      ]
+    },
+    {
+      "s": "These days he ___ at a startup.",
+      "a": [
+        "is interning"
+      ],
+      "cat": "pc:temp-habit",
+      "exp": "Временное состояние/работа → Continuous.",
+      "options": [
+        "interns",
+        "is interning",
+        "intern"
+      ]
+    },
+    {
+      "s": "A new mall ___ near our house. (be + being + V3)",
+      "a": [
+        "is being built"
+      ],
+      "cat": "pc:passive",
+      "exp": "PC Passive: <b>is being built</b>.",
+      "options": [
+        "is being built",
+        "is built",
+        "builds"
+      ]
+    },
+    {
+      "s": "I ___ for feedback from the client.",
+      "a": [
+        "am waiting"
+      ],
+      "cat": "pc:now",
+      "exp": "В процессе ожидания → Continuous.",
+      "options": [
+        "wait",
+        "am waiting",
+        "waits"
+      ]
+    },
+    {
+      "s": "Prices ___ faster this month.",
+      "a": [
+        "are rising"
+      ],
+      "cat": "pc:change",
+      "exp": "Изменение в динамике → Continuous.",
+      "options": [
+        "rise",
+        "are rising",
+        "rises"
+      ]
+    },
+    {
+      "s": "The project ___ complicated; let’s simplify.",
+      "a": [
+        "is getting"
+      ],
+      "cat": "pc:change",
+      "exp": "Становится (динамика) → Continuous.",
+      "options": [
+        "gets",
+        "is getting",
+        "get"
+      ]
+    },
+    {
+      "s": "He ___ always borrowing my charger!",
+      "a": [
+        "is"
+      ],
+      "cat": "pc:always",
+      "exp": "Irritation: <b>is always V-ing</b>.",
+      "options": [
+        "is",
+        "are",
+        "was"
+      ]
+    },
+    {
+      "s": "He is always ___ my charger!",
+      "a": [
+        "borrowing"
+      ],
+      "cat": "pc:always-cont",
+      "exp": "Полная форма раздражения.",
+      "options": [
+        "borrow",
+        "borrowing",
+        "borrows"
+      ]
+    },
+    {
+      "s": "I ___ my boss after lunch.",
+      "a": [
+        "am meeting"
+      ],
+      "cat": "pc:arrangement",
+      "exp": "Личная встреча запланирована → Continuous.",
+      "options": [
+        "meet",
+        "am meeting",
+        "will meet"
+      ]
+    },
+    {
+      "s": "You ___ being rude. (temporary behavior)",
+      "a": [
+        "are"
+      ],
+      "cat": "pc:temp-trait",
+      "exp": "Поведение сейчас (be + being) → Continuous конструкция ниже.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ]
+    },
+    {
+      "s": "You are ___ rude. (temporary behavior)",
+      "a": [
+        "being"
+      ],
+      "cat": "pc:temp-trait-2",
+      "exp": "Be + being для временного поведения.",
+      "options": [
+        "be",
+        "being",
+        "been"
+      ]
+    },
+    {
+      "s": "The server ___ a backup right now.",
+      "a": [
+        "is running"
+      ],
+      "cat": "pc:now-tech",
+      "exp": "Текущий процесс → Continuous.",
+      "options": [
+        "runs",
+        "is running",
+        "run"
+      ]
+    },
+    {
+      "s": "I ___ to work today because my car is in the shop.",
+      "a": [
+        "am taking the bus"
+      ],
+      "cat": "pc:temporary",
+      "exp": "Временная альтернатива → Continuous.",
+      "options": [
+        "take the bus",
+        "am taking the bus",
+        "am take the bus"
+      ]
+    },
+    {
+      "s": "She ___ for her keys at the moment.",
+      "a": [
+        "is looking"
+      ],
+      "cat": "pc:now",
+      "exp": "Сейчас ищет → Continuous.",
+      "options": [
+        "looks",
+        "is looking",
+        "look"
+      ]
+    },
+    {
+      "s": "We ___ a new feature this week.",
+      "a": [
+        "are testing"
+      ],
+      "cat": "pc:temporary",
+      "exp": "Временная работа → Continuous.",
+      "options": [
+        "test",
+        "are testing",
+        "tests"
+      ]
+    },
+    {
+      "s": "I ___ a lot of emails today.",
+      "a": [
+        "am writing"
+      ],
+      "cat": "pc:now",
+      "exp": "Сейчас/в течение дня → Continuous.",
+      "options": [
+        "write",
+        "am writing",
+        "writes"
+      ]
+    },
+    {
+      "s": "My neighbors ___ a party tonight.",
+      "a": [
+        "are having"
+      ],
+      "cat": "pc:arrangement",
+      "exp": "Планы на ближайшее → Continuous.",
+      "options": [
+        "have",
+        "are having",
+        "will have"
+      ]
+    },
+    {
+      "s": "The team ___ progress, slowly but surely.",
+      "a": [
+        "is making"
+      ],
+      "cat": "pc:change",
+      "exp": "Развитие/изменение → Continuous.",
+      "options": [
+        "makes",
+        "is making",
+        "make"
+      ]
+    },
+    {
+      "s": "He ___ more and more confident.",
+      "a": [
+        "is becoming"
+      ],
+      "cat": "pc:change",
+      "exp": "Изменение качества → Continuous.",
+      "options": [
+        "becomes",
+        "is becoming",
+        "become"
+      ]
+    },
+    {
+      "s": "I ___ my phone less these days.",
+      "a": [
+        "am using"
+      ],
+      "cat": "pc:temp-habit",
+      "exp": "Временная привычка → Continuous.",
+      "options": [
+        "use",
+        "am using",
+        "uses"
+      ]
+    },
+    {
+      "s": "They ___ the kitchen while we’re out.",
+      "a": [
+        "are cleaning"
+      ],
+      "cat": "pc:now",
+      "exp": "Процесс сейчас/на время → Continuous.",
+      "options": [
+        "clean",
+        "are cleaning",
+        "cleans"
+      ]
+    },
+    {
+      "s": "We ___ for a new apartment this month.",
+      "a": [
+        "are looking"
+      ],
+      "cat": "pc:temporary",
+      "exp": "Временное длительное действие → Continuous.",
+      "options": [
+        "look",
+        "are looking",
+        "looks"
+      ]
+    },
+    {
+      "s": "He ___ the kids to school this week.",
+      "a": [
+        "is taking"
+      ],
+      "cat": "pc:temporary",
+      "exp": "Временная обязанность → Continuous.",
+      "options": [
+        "takes",
+        "is taking",
+        "take"
+      ]
+    },
+    {
+      "s": "The system ___ unusual traffic right now.",
+      "a": [
+        "is detecting"
+      ],
+      "cat": "pc:now-tech",
+      "exp": "Текущее обнаружение → Continuous.",
+      "options": [
+        "detects",
+        "is detecting",
+        "detect"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#41)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#42)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#43)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#44)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#45)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#46)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#47)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#48)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#49)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    },
+    {
+      "s": "Our startup ___ rapidly this quarter. (#50)",
+      "a": [
+        "is growing"
+      ],
+      "cat": "pc:change",
+      "exp": "Тренд роста → Continuous.",
+      "options": [
+        "grows",
+        "is growing",
+        "grow"
+      ]
+    }
   ]
 }
