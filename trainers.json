@@ -12,6 +12,12 @@
       "title": "Present Simple — демо",
       "desc": "Демо-набор (замени своими).",
       "src": "sets/present_simple.json"
+    },
+    {
+      "id": "present_simple_present_continuous.json"
+      "title": "Present Simple — Present Continuous",
+      "desc": "",
+      "src": "sets/present_simple_present_continuous.json"
     }
   ]
 }
